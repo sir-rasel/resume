@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@keyframes backgroundAnimation {
+    0% {
+        background-image: linear-gradient(to bottom right,rgba(180, 200, 180, .5),rgba(240, 240, 240, .5),rgba(180, 180, 180, .5),rgba(255, 255, 255, .5));
+    }
+    33% {
+        background-image: linear-gradient(to top left,rgba(180, 200, 180, .5),rgba(240, 240, 240, .5),rgba(180, 180, 180, .5),rgba(255, 255, 255, .5));
+    }
+    66% {
+        background-image: linear-gradient(to top,rgba(180, 200, 180, .5),rgba(240, 240, 240, .5),rgba(180, 180, 180, .5),rgba(255, 255, 255, .5));
+    }
+    100% {
+        background-image: linear-gradient(to bottom,rgba(180, 200, 180, .5),rgba(240, 240, 240, .5),rgba(180, 180, 180, .5),rgba(255, 255, 255, .5));
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    padding: 1%;
+    background: #F2F2F2;
+}
+
+main {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 59%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2%;
+    background: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    font-weight: 3em;
+    animation-name: backgroundAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+aside {
+    width: 40%;
+    margin-right: 2.5%;
+}
+
+article {
+    width: 60%;
+    margin-left: 2.5%;
+}
+
+aside, article {
+    margin: 0 auto;
+}
+
+header, footer, section {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    line-height: 1.5em;
+    width: 90%;
+    margin: 3% auto;
+    padding: 3%;
+    box-shadow: 1px 1px 8px 1px lightgray, -1px -1px 8px 1px lightgray;
+    background: #F2F2F2;
+    border-radius: 1%;
+}
+
+header:hover, footer:hover, section:hover {
+    box-shadow: 1px 1px 5px 1px black, -1px -1px 5px 1px black;
+}
+
+img {
+    box-sizing: content-box;
+    display: block;
+    width: 1.5in;
+    height: 1.9in;
+    margin: 0 auto;
+    padding: 3%;
+    border-radius: 10%;
+}
+
+h1 {
+    margin: 0 10%;
+    padding: 1% 2%;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+.address p:nth-child(4) {
+    font-size: .93em;
+}
+
+.link {
+    margin: 1% auto 2% auto;
+    display: block;
+    width: fit-content;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.link:last-child, .link:first-child {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-family: 'Teko', sans-serif;
+    padding-bottom: 5px;
+    color: #2E65A5;
+    text-decoration: underline;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+.carrer {
+    text-align: justify;
+}
+
+.personal p:nth-child(odd) {
+    font-weight: bold;
+}
+
+.additional > ul , .competitive > ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.technical li {
+    color: brown;
+}
+
+.degreeName h4 {
+    display: inline-block;
+}
+
+.degreeName p {
+    float: right;
+    clear: right;
+}
+
+footer p {
+    display: inline-block;
+}
+
+footer p:last-child {
+    font-family: 'Pacifico', cursive;
+    float: right;
+    clear: right;
+}
+
+.resume {
+    display: inline-block;
+    width: max-content;
+    margin: 0 auto;
+    border: 1px solid red;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.resume:hover, .resume a:hover {
+    background-color: lightslategray;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    main {
+        width: 89%;
+        flex-direction: column;
+    }
+
+    aside, article {
+        width: 100%;
+    }
+
+    h1 {
+        margin: 0 15%;
+    }
+}
